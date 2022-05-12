@@ -8,10 +8,9 @@ public class Main {
         if(factorial >= 1 && factorial <= 12) {
             System.out.printf(String.valueOf(getFactorial(factorial)));
         }
-        if (factorial == 0) {
+        else if (factorial == 0) {
             System.out.println(1);
-        }
-        else System.out.println("Введите число от 1 до 12!");
+        } else System.out.println("Введите число от 1 до 12!");
     }
 
     public static int getFactorial(int value) {
