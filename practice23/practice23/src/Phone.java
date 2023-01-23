@@ -11,14 +11,9 @@ public class Phone {
     }
 
     public String validatePhoneNumber(String phone) throws WrongNumberException {
-        try {
             if (phone.length() != 0 && phone.length() >= 3 && phone.length() <= 10) {
-                return "Phone number is validate!";
+                throw new WrongNumberException("Phone number is validate!");
             }
-        } catch (RuntimeException ex) {
-
-            throw new WrongNumberException(ex.getMessage());
-        }
-        return ERROR;
+            return phone;
     }
 }
